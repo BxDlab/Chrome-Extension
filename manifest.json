@@ -1,0 +1,24 @@
+{
+    "name": "BxD Tools",
+    "description": "BxD service tools",
+    "version": "1.2.2",
+    "manifest_version": 3,
+    "permissions": ["storage", "activeTab", "scripting", "contextMenus", "tabs", "clipboardWrite"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "./images/BxD.png"
+    },
+    "icons": {
+        "16": "./images/BxD.png"
+    },
+    "content_scripts": [
+        {
+            "matches" : ["https://trade.tmall.com/*"],  
+            "js": ["taobao.js"]
+        },
+        {
+            "matches": ["https://work.elf.com.tw/*/*"],
+            "js": ["elf.js"]
+        }
+    ]
+}
